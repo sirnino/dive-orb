@@ -3,13 +3,13 @@ description: >
 # What will this command do?
 # Descriptions should be short, simple, and clear.
 parameters:
-  to:
+  version:
     type: string
-    default: "World"
-    description: "Hello to whom?"
+    default: "0.10.0"
+    description: "Version to install"
 steps:
   - run:
       environment:
-        PARAM_TO: <<parameters.to>>
-      name: Hello Greeting
-      command: <<include(scripts/greet.sh)>>
+        DIVE_VERSION: <<parameters.version>>
+      name:
+      command: <<include(scripts/install.sh)>>
