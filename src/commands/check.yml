@@ -1,0 +1,19 @@
+description: >
+  Validates provided docker image.
+
+parameters:
+  image:
+    type: string
+    description: "Docker image to validate."
+
+  config:
+    type: string
+    description: "File with dive settings."
+
+steps:
+  - run:
+      environment:
+        DOCKER_IMAGE: << parameters.docker_image >>
+        DIVE_CONFIG: << parameters.config >>
+      name: "Validate image"
+      command: <<include(scripts/check.sh)>>

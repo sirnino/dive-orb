@@ -1,0 +1,28 @@
+description: >
+  Sample description
+# What will this job do?
+
+executor: default
+
+parameters:
+  version:
+    type: string
+    default: "0.10.0"
+    description: "Dive version."
+
+  image:
+    type: string
+    description: "Docker image to validate."
+
+  config:
+    type: string
+    default: ".dive-ci"
+    description: "File with dive settings."
+
+steps:
+  - install:
+      version: << parameters.version >>
+  - check:
+      image: << parameters.image >>
+      config: << parameters.config >>
+

@@ -1,5 +1,5 @@
 description: >
-  This command echos "Hello World" using file inclusion.
+  Installs specified dive version.
 # What will this command do?
 # Descriptions should be short, simple, and clear.
 parameters:
@@ -11,5 +11,5 @@ steps:
   - run:
       environment:
         DIVE_VERSION: <<parameters.version>>
-      name:
+      name: "Install dive"
       command: <<include(scripts/install.sh)>>
