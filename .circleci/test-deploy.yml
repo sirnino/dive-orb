@@ -17,6 +17,10 @@ jobs:
       - checkout
       # Run your orb's commands to validate them.
       - dive/install
+    run:
+      name: Test dive executable in PATH
+      command: which dive
+
 workflows:
   test-deploy:
     jobs:
