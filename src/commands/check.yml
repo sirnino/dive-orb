@@ -13,7 +13,7 @@ parameters:
 steps:
   - run:
       environment:
-        DOCKER_IMAGE: << parameters.docker_image >>
+        DOCKER_IMAGE: << parameters.image >>
         DIVE_CONFIG: << parameters.config >>
       name: "Validate image"
       command: <<include(scripts/check.sh)>>
