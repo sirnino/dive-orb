@@ -9,6 +9,13 @@ parameters:
   config:
     type: string
     description: "File with dive settings."
+    default: ".dive-ci"
+
+  source:
+    type: enum
+    enum: ["docker", "docker-archive", "podman"]
+    description: "Image source"
+    default: "docker"
 
 steps:
   - run:

@@ -1,5 +1,5 @@
 description: >
-  Installs specified dive version.
+  Installs specified dive version, support for Linux only
 # What will this command do?
 # Descriptions should be short, simple, and clear.
 parameters:
